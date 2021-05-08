@@ -1,0 +1,18 @@
+Mastermind
+================
+
+Mastermind Class
+--------------------------
+
+.. automodule:: pyarcade.mastermind_
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Mastermind Proxy Class
+---------------------------------
+
+.. automodule:: pyarcade.mastermind_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

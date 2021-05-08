@@ -1,0 +1,34 @@
+BlackJack
+================
+
+Blackjack Class
+--------------------------
+
+.. automodule:: pyarcade.blackjack_
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Blackjack Card Class
+--------------------
+
+.. automodule:: pyarcade.card
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Blackjack Deck Class
+--------------------
+
+.. automodule:: pyarcade.deck
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BlackJack Proxy Class
+---------------------------------
+
+.. automodule:: pyarcade.blackjack_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

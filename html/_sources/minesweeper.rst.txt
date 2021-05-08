@@ -1,0 +1,18 @@
+Minesweeper
+================
+
+Minesweeper Class
+---------------------------
+
+.. automodule:: pyarcade.minesweeper_
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Minesweeper Proxy Class
+----------------------------------
+
+.. automodule:: pyarcade.minesweeper_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

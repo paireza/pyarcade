@@ -1,0 +1,101 @@
+tests package
+=============
+
+Submodules
+----------
+
+tests.test\_app module
+----------------------
+
+.. automodule:: tests.test_app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_blackjack module
+----------------------------
+
+.. automodule:: tests.test_blackjack
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_blackjack\_proxy module
+-----------------------------------
+
+.. automodule:: tests.test_blackjack_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_card module
+-----------------------
+
+.. automodule:: tests.test_card
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_connect4 module
+---------------------------
+
+.. automodule:: tests.test_connect4
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_connect4\_proxy module
+----------------------------------
+
+.. automodule:: tests.test_connect4_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_deck module
+-----------------------
+
+.. automodule:: tests.test_deck
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_mastermind module
+-----------------------------
+
+.. automodule:: tests.test_mastermind
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_mastermind\_proxy module
+------------------------------------
+
+.. automodule:: tests.test_mastermind_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_minesweeper module
+------------------------------
+
+.. automodule:: tests.test_minesweeper
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+tests.test\_minesweeper\_proxy module
+-------------------------------------
+
+.. automodule:: tests.test_minesweeper_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

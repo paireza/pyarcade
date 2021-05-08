@@ -1,0 +1,9 @@
+pyarcade
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   pyarcade
+   mastermind
+   blackjack

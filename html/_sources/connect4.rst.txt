@@ -1,0 +1,18 @@
+Connect 4
+================
+
+Connect 4 Class
+--------------------------
+
+.. automodule:: pyarcade.connect_4
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Connect 4 Proxy Class
+---------------------------------
+
+.. automodule:: pyarcade.connect_4_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

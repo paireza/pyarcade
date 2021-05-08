@@ -1,0 +1,28 @@
+.. pyarcade documentation master file, created by
+   sphinx-quickstart on Sat Apr 10 19:20:10 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to pyarcade's documentation!
+====================================
+
+To view a summary of the project, click on the summary tab.
+To view the specific classes, click on their respective tabs.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   summary
+   blackjack
+   connect4
+   mastermind
+   minesweeper
+   flask
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

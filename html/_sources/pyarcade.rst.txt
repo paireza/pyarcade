@@ -1,0 +1,36 @@
+pyarcade package
+================
+
+pyarcade
+-------------------
+
+.. automodule:: pyarcade
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+flask forms class
+---------------------
+
+.. automodule:: pyarcade.forms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+game interface class
+-------------------------------
+
+.. automodule:: pyarcade.game_interface
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+
+Module contents
+---------------
+
+.. automodule:: pyarcade
+   :members:
+   :undoc-members:
+   :show-inheritance:
