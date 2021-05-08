@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Connect 4 &mdash; pyarcade  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mastermind" href="mastermind.html" />
+    <link rel="prev" title="BlackJack" href="blackjack.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyarcade
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Connect 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.connect_4">Connect 4 Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.connect_4_proxy">Connect 4 Proxy Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mastermind.html">Mastermind</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyarcade</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Connect 4</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/connect4.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="connect-4">
+<h1>Connect 4<a class="headerlink" href="#connect-4" title="Permalink to this headline">¶</a></h1>
+<section id="module-pyarcade.connect_4">
+<span id="connect-4-class"></span><h2>Connect 4 Class<a class="headerlink" href="#module-pyarcade.connect_4" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.connect_4.Connect4Game">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.connect_4.</span></code><code class="sig-name descname"><span class="pre">Connect4Game</span></code><a class="headerlink" href="#pyarcade.connect_4.Connect4Game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pyarcade.html#pyarcade.game_interface.GameInterface" title="pyarcade.game_interface.GameInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyarcade.game_interface.GameInterface</span></code></a></p>
+<p>A class representing a Connect4 game session. It contains functions to create, read, update, and delete a
+connect 4 game session.</p>
+<dl class="simple">
+<dt>Note:</dt><dd><p>For now, Connect4 is a 6x7 board where the player and AI take turns to connect four of their pieces</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.AI_turn">
+<code class="sig-name descname"><span class="pre">AI_turn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.AI_turn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to update_game function except this one is played by the AI. The column is randomly generated
+Args:</p>
+<blockquote>
+<div><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+integer unique to all ongoing game sessions. The second key is “col”. The value should be a integer denoting
+which column the player wishes to place their marker in.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
+“session_id”: session_id provided with the original request.
+“turn”: Always 1 since AI is 2.
+“done”: int from 0 to 3. 0 is not done. 1 is player 1 won. 2 is player 2 won. 3 is a tie.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.check_connect4">
+<code class="sig-name descname"><span class="pre">check_connect4</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.check_connect4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that checks if the game is finished (connect 4 achieved).</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>self: the current instance of the connect 4 game.
+session: the session id of the current game.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: true if game is finished, false otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.check_connect4_cols">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">check_connect4_cols</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.check_connect4_cols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that checks the cols in the game state to see if connect 4 is achieved.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary that represents the board the current game.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: true if connect 4 is found, false otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.check_connect4_diagonal">
+<code class="sig-name descname"><span class="pre">check_connect4_diagonal</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.check_connect4_diagonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that checks the diagonals in the game state to see if connect 4 is achieved.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary that represents the board the current game.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: true if connect 4 is found, false otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.check_connect4_rows">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">check_connect4_rows</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.check_connect4_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that checks the rows in the game state to see if connect 4 is achieved.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary that represents the board the current game.</p>
+</dd>
+<dt>Returns:</dt><dd><p>bool: true if connect 4 is found, false otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.check_result">
+<code class="sig-name descname"><span class="pre">check_result</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.check_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method to check whether the game has ended</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary that represents the board the current game.
+request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+integer unique to all ongoing game sessions. The second key is “col”. The value should be a integer denoting
+which column the player wishes to place their marker in.
+player: the current player</p>
+</dd>
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
+“session_id”: session_id provided with the original request.
+“turn”: whose turn is next. Either 1 or 2.
+“done”: int from 0 to 3. 0 is not done. 1 is player 1 won. 2 is player 2 won. 3 is a tie.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.create_game">
+<code class="sig-name descname"><span class="pre">create_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.create_game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upon calling create_game, the Connect4 game should initialize its board</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “game_id”.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing the session_id in the request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.is_board_filled">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">is_board_filled</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.is_board_filled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes this instance of the game from the session id list.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>board: 2D array of the game board.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing the session_id in the request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.is_valid_row">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">is_valid_row</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.is_valid_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that validates the target row.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary that represents the board the current game.
+col: an integer representing the target row</p>
+</dd>
+<dt>Returns:</dt><dd><p>boolean: true if row is valid, false otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.matrix_to_list_of_all_diagonals">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">matrix_to_list_of_all_diagonals</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.matrix_to_list_of_all_diagonals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.read_game">
+<code class="sig-name descname"><span class="pre">read_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.read_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
+“session_id”: session_id provided with the original request.
+“turn”: whose turn is next. Either 1 or 2.
+“done”: int from 0 to 3. 0 is not done. 1 is player 1 won. 2 is player 2 won. 3 is a tie.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.update_game">
+<code class="sig-name descname"><span class="pre">update_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.update_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+integer unique to all ongoing game sessions. The second key is “col”. The value should be a integer denoting
+which column the player wishes to place their marker in.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
+“session_id”: session_id provided with the original request.
+“turn”: Always 1 since AI is 2.
+“done”: int from 0 to 3. 0 is not done. 1 is player 1 won. 2 is player 2 won. 3 is a tie.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.update_row">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">update_row</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.update_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that updates the target row.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary that represents the board the current game.
+col: an integer representing the target row</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyarcade.connect_4_proxy">
+<span id="connect-4-proxy-class"></span><h2>Connect 4 Proxy Class<a class="headerlink" href="#module-pyarcade.connect_4_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.connect_4_proxy.Connect4GameProxy">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.connect_4_proxy.</span></code><code class="sig-name descname"><span class="pre">Connect4GameProxy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_instance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyarcade.connect_4.Connect4Game" title="pyarcade.connect_4.Connect4Game"><span class="pre">pyarcade.connect_4.Connect4Game</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.connect_4_proxy.Connect4GameProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pyarcade.html#pyarcade.game_interface.GameInterface" title="pyarcade.game_interface.GameInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyarcade.game_interface.GameInterface</span></code></a></p>
+<p>Connect4GameProxy is meant to be a mediator between client code attempting to play the game
+Mastermind and the Mastermind implementation. More specifically, this class’s responsibility
+is to validate requests before passing them on to a Mastermind instance. Separating the responsibility of
+validating inputs to a game and actually running a game helps us follow the single-responsibility principle</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>game_instance: A reference to the game being played.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pyarcade.connect_4_proxy.Connect4GameProxy.create_game">
+<code class="sig-name descname"><span class="pre">create_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4_proxy.Connect4GameProxy.create_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “game_id”. The value
+should be zero.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions. If the request is invalid, a session_id of
+zero should be returned. Otherwise, pass the request onto the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4_proxy.Connect4GameProxy.read_game">
+<code class="sig-name descname"><span class="pre">read_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4_proxy.Connect4GameProxy.read_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions. If the request is invalid, a session_id of
+zero should be returned. Otherwise, pass the request onto the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4_proxy.Connect4GameProxy.update_game">
+<code class="sig-name descname"><span class="pre">update_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4_proxy.Connect4GameProxy.update_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+integer unique to all ongoing game sessions. The second key is “col”. The value should be a number from 0 to
+6 representing the columns the marker can be placed.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions. If the request is invalid, a session_id of
+zero should be returned. Otherwise, pass the request onto the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mastermind.html" class="btn btn-neutral float-right" title="Mastermind" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="blackjack.html" class="btn btn-neutral float-left" title="BlackJack" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

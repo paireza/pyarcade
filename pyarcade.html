@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyarcade package &mdash; pyarcade  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyarcade
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect4.html">Connect 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mastermind.html">Mastermind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minesweeper.html">Minesweeper</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyarcade</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyarcade package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pyarcade.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="pyarcade-package">
+<h1>pyarcade package<a class="headerlink" href="#pyarcade-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-pyarcade">
+<span id="pyarcade"></span><h2>pyarcade<a class="headerlink" href="#module-pyarcade" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="pyarcade.create_app">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.</span></code><code class="sig-name descname"><span class="pre">create_app</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.create_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles all input from the frontend.
+Received the input from frontend and hits the corresponding endpoints
+This includes login inputs as well as switching between different pages</p>
+</dd></dl>
+
+</section>
+<section id="module-pyarcade.forms">
+<span id="flask-forms-class"></span><h2>flask forms class<a class="headerlink" href="#module-pyarcade.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.forms.Connect4Form">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">Connect4Form</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.Connect4Form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Connect4 form for the column to drop the token</p>
+<dl class="simple">
+<dt>FlaskForm if valid if:</dt><dd><p>col is an integer ranged from 0 to 6</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.Connect4Form.col">
+<code class="sig-name descname"><span class="pre">col</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('column',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.Connect4Form.col" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.Connect4Form.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Submit',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.Connect4Form.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.forms.LoginForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">LoginForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.LoginForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Login form allowing users to login to play the games</p>
+<dl class="simple">
+<dt>Form is valid if:</dt><dd><p>username is given
+password is given</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.LoginForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.LoginForm.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.LoginForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Login',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.LoginForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.LoginForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(StringField,</span> <span class="pre">('Username',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.LoginForm.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.forms.MasterMindForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">MasterMindForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.MasterMindForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Mastermind game form for guesses</p>
+<dl class="simple">
+<dt>FlaskForm is valid if:</dt><dd><p>g1, g2, g3, and g4 are unique integers ranged from 0 to 9</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g1">
+<code class="sig-name descname"><span class="pre">g1</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">1',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g2">
+<code class="sig-name descname"><span class="pre">g2</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">2',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g3">
+<code class="sig-name descname"><span class="pre">g3</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">3',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g4">
+<code class="sig-name descname"><span class="pre">g4</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">4',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Submit',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.forms.RegistrationForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">RegistrationForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.RegistrationForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Registration form for users to register an account</p>
+<dl class="simple">
+<dt>The form is valid if:</dt><dd><p>username is a string of length 1 to 40
+password is anything of length 4 to 32
+confirm_password must match password</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.confirm_password">
+<code class="sig-name descname"><span class="pre">confirm_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Confirm</span> <span class="pre">Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.EqualTo</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.confirm_password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Sign</span> <span class="pre">Up',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(StringField,</span> <span class="pre">('Username',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.forms.RegistrationForm.validate_username">
+<code class="sig-name descname"><span class="pre">validate_username</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.RegistrationForm.validate_username" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>username: username data passed in from RegistrationForm</p>
+</dd>
+</dl>
+<p>Raise ValidationError if the username already exists in the database</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.forms.init_guesses">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">init_guesses</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.init_guesses" title="Permalink to this definition">¶</a></dt>
+<dd><p>resets global variables</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.forms.unique_guess">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">unique_guess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">flask_wtf.form.FlaskForm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">wtforms.fields.core.IntegerField</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.unique_guess" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>form: FlaskForm that contains integer inputs
+guess: An integer</p>
+</dd>
+</dl>
+<p>Throws an error if a guess is not unique</p>
+</dd></dl>
+
+</section>
+<section id="module-pyarcade.game_interface">
+<span id="game-interface-class"></span><h2>game interface class<a class="headerlink" href="#module-pyarcade.game_interface" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.game_interface.GameInterface">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.game_interface.</span></code><code class="sig-name descname"><span class="pre">GameInterface</span></code><a class="headerlink" href="#pyarcade.game_interface.GameInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>GameInterface is an abstract base class meant to define the interface for anything
+game-like in our software.</p>
+<p>You do not need to modify this file at all. Other classes will implement these functions.</p>
+<dl class="py method">
+<dt id="pyarcade.game_interface.GameInterface.create_game">
+<code class="sig-name descname"><span class="pre">create_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.game_interface.GameInterface.create_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “game_id”. The value
+is an integer denoting which game should be created</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.game_interface.GameInterface.read_game">
+<code class="sig-name descname"><span class="pre">read_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.game_interface.GameInterface.read_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a several key-value pairs that fully describe the game’s state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.game_interface.GameInterface.update_game">
+<code class="sig-name descname"><span class="pre">update_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.game_interface.GameInterface.update_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary describing the “move” to be made in the game</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary describing the game’s new state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-0">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-0" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="id0">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.</span></code><code class="sig-name descname"><span class="pre">create_app</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles all input from the frontend.
+Received the input from frontend and hits the corresponding endpoints
+This includes login inputs as well as switching between different pages</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

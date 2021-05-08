@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tests package &mdash; pyarcade  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyarcade
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect4.html">Connect 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mastermind.html">Mastermind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minesweeper.html">Minesweeper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">Flask</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyarcade</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>tests package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="tests-package">
+<h1>tests package<a class="headerlink" href="#tests-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-tests.test_app">
+<span id="tests-test-app-module"></span><h2>tests.test_app module<a class="headerlink" href="#module-tests.test_app" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_app.ApplicationTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_app.</span></code><code class="sig-name descname"><span class="pre">ApplicationTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_account_logout_not_authenticated">
+<code class="sig-name descname"><span class="pre">test_account_logout_not_authenticated</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_account_logout_not_authenticated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_account_page_authenticated">
+<code class="sig-name descname"><span class="pre">test_get_account_page_authenticated</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_account_page_authenticated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_account_page_not_authenticated">
+<code class="sig-name descname"><span class="pre">test_get_account_page_not_authenticated</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_account_page_not_authenticated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_blackjack">
+<code class="sig-name descname"><span class="pre">test_get_blackjack</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_blackjack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_connect4">
+<code class="sig-name descname"><span class="pre">test_get_connect4</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_connect4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_login_page">
+<code class="sig-name descname"><span class="pre">test_get_login_page</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_login_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_mastermind_page">
+<code class="sig-name descname"><span class="pre">test_get_mastermind_page</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_mastermind_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_menu_options_return_menu">
+<code class="sig-name descname"><span class="pre">test_get_menu_options_return_menu</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_menu_options_return_menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_minesweeper">
+<code class="sig-name descname"><span class="pre">test_get_minesweeper</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_minesweeper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_get_register_page">
+<code class="sig-name descname"><span class="pre">test_get_register_page</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_get_register_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_post_blackjack">
+<code class="sig-name descname"><span class="pre">test_post_blackjack</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_post_blackjack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_post_connect4">
+<code class="sig-name descname"><span class="pre">test_post_connect4</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_post_connect4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_post_connect_4">
+<code class="sig-name descname"><span class="pre">test_post_connect_4</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_post_connect_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_post_mastermind_page">
+<code class="sig-name descname"><span class="pre">test_post_mastermind_page</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_post_mastermind_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_register_password_does_not_match">
+<code class="sig-name descname"><span class="pre">test_register_password_does_not_match</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_register_password_does_not_match" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_app.ApplicationTestCase.test_register_taken_username">
+<code class="sig-name descname"><span class="pre">test_register_taken_username</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_app.ApplicationTestCase.test_register_taken_username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_blackjack">
+<span id="tests-test-blackjack-module"></span><h2>tests.test_blackjack module<a class="headerlink" href="#module-tests.test_blackjack" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_blackjack.ApplicationTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_blackjack.</span></code><code class="sig-name descname"><span class="pre">ApplicationTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.setUp">
+<code class="sig-name descname"><span class="pre">setUp</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.tearDown">
+<code class="sig-name descname"><span class="pre">tearDown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_create_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_create_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_create_game_gives_unique_sequence">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_game_gives_unique_sequence</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_create_game_gives_unique_sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_hit_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_hit_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_hit_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_hit_hit_stand_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_hit_hit_stand_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_hit_hit_stand_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_hit_stand_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_hit_stand_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_hit_stand_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_lose_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_lose_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_lose_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_read_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_read_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_read_game_done_boolean">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_done_boolean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_read_game_done_boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_read_game_return_correct_keys">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_return_correct_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_read_game_return_correct_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_read_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_read_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_read_invalid_blackjack_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_invalid_blackjack_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_read_invalid_blackjack_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_update_game_display_correct_keys">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_display_correct_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_update_game_display_correct_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_update_game_done_boolean">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_done_boolean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_update_game_done_boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack.ApplicationTestCase.test_update_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack.ApplicationTestCase.test_update_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_blackjack_proxy">
+<span id="tests-test-blackjack-proxy-module"></span><h2>tests.test_blackjack_proxy module<a class="headerlink" href="#module-tests.test_blackjack_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_blackjack_proxy.BlackjackProxyTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_blackjack_proxy.</span></code><code class="sig-name descname"><span class="pre">BlackjackProxyTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack_proxy.BlackjackProxyTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_game_id_wrong_type">
+<code class="sig-name descname"><span class="pre">test_create_game_game_id_wrong_type</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_game_id_wrong_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_multiple_keys">
+<code class="sig-name descname"><span class="pre">test_create_game_multiple_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_multiple_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_wrong_key">
+<code class="sig-name descname"><span class="pre">test_create_game_wrong_key</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_wrong_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_wrong_value">
+<code class="sig-name descname"><span class="pre">test_create_game_wrong_value</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_wrong_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_card">
+<span id="tests-test-card-module"></span><h2>tests.test_card module<a class="headerlink" href="#module-tests.test_card" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_card.BlackjackCardTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_card.</span></code><code class="sig-name descname"><span class="pre">BlackjackCardTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_card.BlackjackCardTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_card.BlackjackCardTestCase.test_equals_method">
+<code class="sig-name descname"><span class="pre">test_equals_method</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_card.BlackjackCardTestCase.test_equals_method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_card.BlackjackCardTestCase.test_getter">
+<code class="sig-name descname"><span class="pre">test_getter</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_card.BlackjackCardTestCase.test_getter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_connect4">
+<span id="tests-test-connect4-module"></span><h2>tests.test_connect4 module<a class="headerlink" href="#module-tests.test_connect4" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_connect4.ApplicationTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_connect4.</span></code><code class="sig-name descname"><span class="pre">ApplicationTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.setUp">
+<code class="sig-name descname"><span class="pre">setUp</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.tearDown">
+<code class="sig-name descname"><span class="pre">tearDown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_create_connect4_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_connect4_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_create_connect4_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_create_game_gives_unique_sequence">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_game_gives_unique_sequence</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_create_game_gives_unique_sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_four_moves_game_win">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_four_moves_game_win</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_four_moves_game_win" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_handle_column_filled">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_handle_column_filled</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_handle_column_filled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_read_connect4_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_connect4_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_read_connect4_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_read_game_returns_0_if_session_id_invalid">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_returns_0_if_session_id_invalid</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_read_game_returns_0_if_session_id_invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_read_invalid_connect4_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_invalid_connect4_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_read_invalid_connect4_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_update_and_read">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_and_read</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_update_and_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_update_connect4_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_connect4_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_update_connect4_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_update_game_done_boolean">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_done_boolean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_update_game_done_boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4.ApplicationTestCase.test_update_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4.ApplicationTestCase.test_update_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_connect4_proxy">
+<span id="tests-test-connect4-proxy-module"></span><h2>tests.test_connect4_proxy module<a class="headerlink" href="#module-tests.test_connect4_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_connect4_proxy.ProxyTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_connect4_proxy.</span></code><code class="sig-name descname"><span class="pre">ProxyTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_create_game_game_id_missing">
+<code class="sig-name descname"><span class="pre">test_create_game_game_id_missing</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_create_game_game_id_missing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_create_game_no_key_value_pair">
+<code class="sig-name descname"><span class="pre">test_create_game_no_key_value_pair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_create_game_no_key_value_pair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_create_game_value_is_not_zero">
+<code class="sig-name descname"><span class="pre">test_create_game_value_is_not_zero</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_create_game_value_is_not_zero" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_create_game_value_is_string">
+<code class="sig-name descname"><span class="pre">test_create_game_value_is_string</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_create_game_value_is_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_read_game_no_key_value_pair">
+<code class="sig-name descname"><span class="pre">test_read_game_no_key_value_pair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_read_game_no_key_value_pair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_read_game_session_id_missing">
+<code class="sig-name descname"><span class="pre">test_read_game_session_id_missing</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_read_game_session_id_missing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_read_game_two_key_value_pair">
+<code class="sig-name descname"><span class="pre">test_read_game_two_key_value_pair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_read_game_two_key_value_pair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_read_game_value_is_string">
+<code class="sig-name descname"><span class="pre">test_read_game_value_is_string</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_read_game_value_is_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_update_game_guess_col_incorrect">
+<code class="sig-name descname"><span class="pre">test_update_game_guess_col_incorrect</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_update_game_guess_col_incorrect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_update_game_no_key_value_pair">
+<code class="sig-name descname"><span class="pre">test_update_game_no_key_value_pair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_update_game_no_key_value_pair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_update_game_one_key_value_pair">
+<code class="sig-name descname"><span class="pre">test_update_game_one_key_value_pair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_update_game_one_key_value_pair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_update_game_session_id_and_guess_missing">
+<code class="sig-name descname"><span class="pre">test_update_game_session_id_and_guess_missing</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_update_game_session_id_and_guess_missing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_update_game_three_key_value_pair">
+<code class="sig-name descname"><span class="pre">test_update_game_three_key_value_pair</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_update_game_three_key_value_pair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_connect4_proxy.ProxyTestCase.test_update_game_value_is_string">
+<code class="sig-name descname"><span class="pre">test_update_game_value_is_string</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_connect4_proxy.ProxyTestCase.test_update_game_value_is_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_deck">
+<span id="tests-test-deck-module"></span><h2>tests.test_deck module<a class="headerlink" href="#module-tests.test_deck" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_deck.BlackjackDeckTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_deck.</span></code><code class="sig-name descname"><span class="pre">BlackjackDeckTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_deck.BlackjackDeckTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_deck.BlackjackDeckTestCase.test_deck_draw_the_entire_deck">
+<code class="sig-name descname"><span class="pre">test_deck_draw_the_entire_deck</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_deck.BlackjackDeckTestCase.test_deck_draw_the_entire_deck" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_deck.BlackjackDeckTestCase.test_deck_getter">
+<code class="sig-name descname"><span class="pre">test_deck_getter</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_deck.BlackjackDeckTestCase.test_deck_getter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_deck.BlackjackDeckTestCase.test_deck_shuffle_twice">
+<code class="sig-name descname"><span class="pre">test_deck_shuffle_twice</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_deck.BlackjackDeckTestCase.test_deck_shuffle_twice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_mastermind">
+<span id="tests-test-mastermind-module"></span><h2>tests.test_mastermind module<a class="headerlink" href="#module-tests.test_mastermind" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_mastermind.ApplicationTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_mastermind.</span></code><code class="sig-name descname"><span class="pre">ApplicationTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.setUp">
+<code class="sig-name descname"><span class="pre">setUp</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.tearDown">
+<code class="sig-name descname"><span class="pre">tearDown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_create_game_gives_unique_sequence">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_game_gives_unique_sequence</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_create_game_gives_unique_sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_create_mastermind_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_mastermind_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_create_mastermind_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_read_game_done_boolean">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_done_boolean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_read_game_done_boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_read_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_read_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_read_game_return_three_correct_keys">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_game_return_three_correct_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_read_game_return_three_correct_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_read_invalid_mastermind_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_invalid_mastermind_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_read_invalid_mastermind_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_read_mastermind_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_mastermind_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_read_mastermind_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_update_game_done_boolean">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_done_boolean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_update_game_done_boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_update_game_guesses_contain_previous_guesses">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_guesses_contain_previous_guesses</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_update_game_guesses_contain_previous_guesses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_update_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_update_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_update_game_return_three_correct_keys">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_return_three_correct_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_update_game_return_three_correct_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind.ApplicationTestCase.test_update_mastermind_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_mastermind_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind.ApplicationTestCase.test_update_mastermind_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_mastermind_proxy">
+<span id="tests-test-mastermind-proxy-module"></span><h2>tests.test_mastermind_proxy module<a class="headerlink" href="#module-tests.test_mastermind_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_mastermind_proxy.MastermindTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_mastermind_proxy.</span></code><code class="sig-name descname"><span class="pre">MastermindTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind_proxy.MastermindTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_id_is_not_int">
+<code class="sig-name descname"><span class="pre">test_proxy_create_game_id_is_not_int</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_id_is_not_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_incorrect_key">
+<code class="sig-name descname"><span class="pre">test_proxy_create_game_incorrect_key</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_incorrect_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_multiple_or_no_keys">
+<code class="sig-name descname"><span class="pre">test_proxy_create_game_multiple_or_no_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_multiple_or_no_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_multiple_request_len">
+<code class="sig-name descname"><span class="pre">test_proxy_create_game_multiple_request_len</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_multiple_request_len" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_no_game_id">
+<code class="sig-name descname"><span class="pre">test_proxy_create_game_no_game_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_no_game_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_minesweeper">
+<span id="tests-test-minesweeper-module"></span><h2>tests.test_minesweeper module<a class="headerlink" href="#module-tests.test_minesweeper" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_minesweeper.ApplicationTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_minesweeper.</span></code><code class="sig-name descname"><span class="pre">ApplicationTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.setUp">
+<code class="sig-name descname"><span class="pre">setUp</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.tearDown">
+<code class="sig-name descname"><span class="pre">tearDown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.tearDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_create_game_gives_unique_sequence">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_game_gives_unique_sequence</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_create_game_gives_unique_sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_create_minesweeper_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_create_minesweeper_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_create_minesweeper_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_finish_game_minesweeper_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_finish_game_minesweeper_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_finish_game_minesweeper_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_done_boolean">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_minesweeper_read_game_done_boolean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_done_boolean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_return_correct_keys">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_minesweeper_read_game_return_correct_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_return_correct_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_minesweeper_read_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_one_move_minesweeper_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_one_move_minesweeper_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_one_move_minesweeper_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_read_minesweeper_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_read_minesweeper_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_read_minesweeper_game" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_update_game_display_status">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_display_status</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_update_game_display_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_update_game_return_correct_keys">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_return_correct_keys</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_update_game_return_correct_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="tests.test_minesweeper.ApplicationTestCase.test_update_game_return_same_session_id">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">test_update_game_return_same_session_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper.ApplicationTestCase.test_update_game_return_same_session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.test_minesweeper_proxy">
+<span id="tests-test-minesweeper-proxy-module"></span><h2>tests.test_minesweeper_proxy module<a class="headerlink" href="#module-tests.test_minesweeper_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="tests.test_minesweeper_proxy.MinesweeperProxyTestCase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">tests.test_minesweeper_proxy.</span></code><code class="sig-name descname"><span class="pre">MinesweeperProxyTestCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper_proxy.MinesweeperProxyTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt id="tests.test_minesweeper_proxy.MinesweeperProxyTestCase.test_create_game_input_dict_with_invalid_keys_or_length">
+<code class="sig-name descname"><span class="pre">test_create_game_input_dict_with_invalid_keys_or_length</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tests.test_minesweeper_proxy.MinesweeperProxyTestCase.test_create_game_input_dict_with_invalid_keys_or_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

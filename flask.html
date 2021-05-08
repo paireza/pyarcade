@@ -1,0 +1,852 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Flask &mdash; pyarcade  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Minesweeper" href="minesweeper.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyarcade
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect4.html">Connect 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mastermind.html">Mastermind</a></li>
+<li class="toctree-l1"><a class="reference internal" href="minesweeper.html">Minesweeper</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.forms">Flask Forms Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.models">Flask Models Class</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyarcade</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Flask</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/flask.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="flask">
+<h1>Flask<a class="headerlink" href="#flask" title="Permalink to this headline">¶</a></h1>
+<section id="module-pyarcade.forms">
+<span id="flask-forms-class"></span><h2>Flask Forms Class<a class="headerlink" href="#module-pyarcade.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.forms.Connect4Form">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">Connect4Form</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.Connect4Form" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Connect4 form for the column to drop the token</p>
+<dl class="simple">
+<dt>FlaskForm if valid if:</dt><dd><p>col is an integer ranged from 0 to 6</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.Connect4Form.col">
+<code class="sig-name descname"><span class="pre">col</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('column',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.Connect4Form.col" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.Connect4Form.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Submit',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.Connect4Form.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.forms.LoginForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">LoginForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.LoginForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Login form allowing users to login to play the games</p>
+<dl class="simple">
+<dt>Form is valid if:</dt><dd><p>username is given
+password is given</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.LoginForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.LoginForm.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.LoginForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Login',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.LoginForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.LoginForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(StringField,</span> <span class="pre">('Username',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.LoginForm.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.forms.MasterMindForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">MasterMindForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.MasterMindForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Mastermind game form for guesses</p>
+<dl class="simple">
+<dt>FlaskForm is valid if:</dt><dd><p>g1, g2, g3, and g4 are unique integers ranged from 0 to 9</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g1">
+<code class="sig-name descname"><span class="pre">g1</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">1',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g2">
+<code class="sig-name descname"><span class="pre">g2</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">2',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g3">
+<code class="sig-name descname"><span class="pre">g3</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">3',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.g4">
+<code class="sig-name descname"><span class="pre">g4</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(IntegerField,</span> <span class="pre">('guess</span> <span class="pre">4',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.NumberRange</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;function</span> <span class="pre">unique_guess&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.g4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.MasterMindForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Submit',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.MasterMindForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.forms.RegistrationForm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">RegistrationForm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.RegistrationForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_wtf.form.FlaskForm</span></code></p>
+<p>Registration form for users to register an account</p>
+<dl class="simple">
+<dt>The form is valid if:</dt><dd><p>username is a string of length 1 to 40
+password is anything of length 4 to 32
+confirm_password must match password</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.confirm_password">
+<code class="sig-name descname"><span class="pre">confirm_password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Confirm</span> <span class="pre">Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.EqualTo</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.confirm_password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.password">
+<code class="sig-name descname"><span class="pre">password</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(PasswordField,</span> <span class="pre">('Password',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.submit">
+<code class="sig-name descname"><span class="pre">submit</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(SubmitField,</span> <span class="pre">('Sign</span> <span class="pre">Up',),</span> <span class="pre">{})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.submit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.forms.RegistrationForm.username">
+<code class="sig-name descname"><span class="pre">username</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;UnboundField(StringField,</span> <span class="pre">('Username',),</span> <span class="pre">{'validators':</span> <span class="pre">[&lt;wtforms.validators.InputRequired</span> <span class="pre">object&gt;,</span> <span class="pre">&lt;wtforms.validators.Length</span> <span class="pre">object&gt;]})&gt;</span></em><a class="headerlink" href="#pyarcade.forms.RegistrationForm.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.forms.RegistrationForm.validate_username">
+<code class="sig-name descname"><span class="pre">validate_username</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.RegistrationForm.validate_username" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>username: username data passed in from RegistrationForm</p>
+</dd>
+</dl>
+<p>Raise ValidationError if the username already exists in the database</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.forms.init_guesses">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">init_guesses</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.init_guesses" title="Permalink to this definition">¶</a></dt>
+<dd><p>resets global variables</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.forms.unique_guess">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.forms.</span></code><code class="sig-name descname"><span class="pre">unique_guess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">flask_wtf.form.FlaskForm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">wtforms.fields.core.IntegerField</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.forms.unique_guess" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>form: FlaskForm that contains integer inputs
+guess: An integer</p>
+</dd>
+</dl>
+<p>Throws an error if a guess is not unique</p>
+</dd></dl>
+
+</section>
+<section id="module-pyarcade.models">
+<span id="flask-models-class"></span><h2>Flask Models Class<a class="headerlink" href="#module-pyarcade.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.models.Blackjack">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">Blackjack</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.models.Blackjack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_mongoengine.Document</span></code></p>
+<p>All necessary forms to query blackjack session</p>
+<dl class="py exception">
+<dt id="pyarcade.models.Blackjack.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">DoesNotExist</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="pyarcade.models.Blackjack.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.dealer_hand">
+<code class="sig-name descname"><span class="pre">dealer_hand</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.dealer_hand" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.deck">
+<code class="sig-name descname"><span class="pre">deck</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.deck" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A field wrapper around MongoDB’s ObjectIds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.objects">
+<code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default QuerySet Manager.</p>
+<p>Custom QuerySet Manager functions can extend this class and users can
+add extra queryset functionality.  Any custom manager methods must accept a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> class as its first argument, and a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code> as its second argument.</p>
+<p>The method function should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code>
+, probably the same one that was passed in, but modified in some way.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.player_hand">
+<code class="sig-name descname"><span class="pre">player_hand</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.player_hand" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.session">
+<code class="sig-name descname"><span class="pre">session</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.session" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.status">
+<code class="sig-name descname"><span class="pre">status</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Blackjack.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#pyarcade.models.Blackjack.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.models.Connect4">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">Connect4</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.models.Connect4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_mongoengine.Document</span></code></p>
+<p>All necessary forms to query connect4 session</p>
+<dl class="py exception">
+<dt id="pyarcade.models.Connect4.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">DoesNotExist</span></code><a class="headerlink" href="#pyarcade.models.Connect4.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="pyarcade.models.Connect4.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></code><a class="headerlink" href="#pyarcade.models.Connect4.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.board">
+<code class="sig-name descname"><span class="pre">board</span></code><a class="headerlink" href="#pyarcade.models.Connect4.board" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#pyarcade.models.Connect4.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A field wrapper around MongoDB’s ObjectIds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.objects">
+<code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#pyarcade.models.Connect4.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default QuerySet Manager.</p>
+<p>Custom QuerySet Manager functions can extend this class and users can
+add extra queryset functionality.  Any custom manager methods must accept a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> class as its first argument, and a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code> as its second argument.</p>
+<p>The method function should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code>
+, probably the same one that was passed in, but modified in some way.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.session">
+<code class="sig-name descname"><span class="pre">session</span></code><a class="headerlink" href="#pyarcade.models.Connect4.session" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.status">
+<code class="sig-name descname"><span class="pre">status</span></code><a class="headerlink" href="#pyarcade.models.Connect4.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.turn">
+<code class="sig-name descname"><span class="pre">turn</span></code><a class="headerlink" href="#pyarcade.models.Connect4.turn" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Connect4.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#pyarcade.models.Connect4.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.models.Mastermind">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">Mastermind</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.models.Mastermind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_mongoengine.Document</span></code></p>
+<p>All necessary forms to query mastermind session</p>
+<dl class="py exception">
+<dt id="pyarcade.models.Mastermind.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">DoesNotExist</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="pyarcade.models.Mastermind.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.gameover">
+<code class="sig-name descname"><span class="pre">gameover</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.gameover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean field type.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.guesses">
+<code class="sig-name descname"><span class="pre">guesses</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.guesses" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A field wrapper around MongoDB’s ObjectIds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.objects">
+<code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default QuerySet Manager.</p>
+<p>Custom QuerySet Manager functions can extend this class and users can
+add extra queryset functionality.  Any custom manager methods must accept a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> class as its first argument, and a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code> as its second argument.</p>
+<p>The method function should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code>
+, probably the same one that was passed in, but modified in some way.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.sequence">
+<code class="sig-name descname"><span class="pre">sequence</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.session">
+<code class="sig-name descname"><span class="pre">session</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.session" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Mastermind.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#pyarcade.models.Mastermind.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.models.Minesweeper">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">Minesweeper</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.models.Minesweeper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_mongoengine.Document</span></code></p>
+<p>All necessary forms to query minesweeper session</p>
+<dl class="py exception">
+<dt id="pyarcade.models.Minesweeper.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">DoesNotExist</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="pyarcade.models.Minesweeper.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.die">
+<code class="sig-name descname"><span class="pre">die</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.die" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean field type.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A field wrapper around MongoDB’s ObjectIds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.mine_list">
+<code class="sig-name descname"><span class="pre">mine_list</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.mine_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.objects">
+<code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default QuerySet Manager.</p>
+<p>Custom QuerySet Manager functions can extend this class and users can
+add extra queryset functionality.  Any custom manager methods must accept a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> class as its first argument, and a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code> as its second argument.</p>
+<p>The method function should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code>
+, probably the same one that was passed in, but modified in some way.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.reference_board">
+<code class="sig-name descname"><span class="pre">reference_board</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.reference_board" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.session">
+<code class="sig-name descname"><span class="pre">session</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.session" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.user_board">
+<code class="sig-name descname"><span class="pre">user_board</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.user_board" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list field that wraps a standard field, allowing multiple instances
+of the field to be used as a list in the database.</p>
+<p>If using with ReferenceFields see: <span class="xref std std-ref">one-to-many-with-listfields</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Required means it cannot be empty - as the default for ListFields is []</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.Minesweeper.win">
+<code class="sig-name descname"><span class="pre">win</span></code><a class="headerlink" href="#pyarcade.models.Minesweeper.win" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean field type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pyarcade.models.User">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">User</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.models.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_mongoengine.Document</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">flask_login.mixins.UserMixin</span></code></p>
+<p>Class representing User object</p>
+<dl class="py exception">
+<dt id="pyarcade.models.User.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">DoesNotExist</span></code><a class="headerlink" href="#pyarcade.models.User.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.DoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="pyarcade.models.User.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></code><a class="headerlink" href="#pyarcade.models.User.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">mongoengine.errors.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.blackjack_score">
+<code class="sig-name descname"><span class="pre">blackjack_score</span></code><a class="headerlink" href="#pyarcade.models.User.blackjack_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.connect4_score">
+<code class="sig-name descname"><span class="pre">connect4_score</span></code><a class="headerlink" href="#pyarcade.models.User.connect4_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.models.User.get_blackjack_score">
+<code class="sig-name descname"><span class="pre">get_blackjack_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyarcade.models.User.get_blackjack_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.models.User.get_connect4_score">
+<code class="sig-name descname"><span class="pre">get_connect4_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyarcade.models.User.get_connect4_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.models.User.get_id">
+<code class="sig-name descname"><span class="pre">get_id</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#pyarcade.models.User.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.models.User.get_mastermind_score">
+<code class="sig-name descname"><span class="pre">get_mastermind_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyarcade.models.User.get_mastermind_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.models.User.get_minesweeper_score">
+<code class="sig-name descname"><span class="pre">get_minesweeper_score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">int</span><a class="headerlink" href="#pyarcade.models.User.get_minesweeper_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#pyarcade.models.User.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A field wrapper around MongoDB’s ObjectIds.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.mastermind_score">
+<code class="sig-name descname"><span class="pre">mastermind_score</span></code><a class="headerlink" href="#pyarcade.models.User.mastermind_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.minesweeper_score">
+<code class="sig-name descname"><span class="pre">minesweeper_score</span></code><a class="headerlink" href="#pyarcade.models.User.minesweeper_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>32-bit integer field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.objects">
+<code class="sig-name descname"><span class="pre">objects</span></code><a class="headerlink" href="#pyarcade.models.User.objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default QuerySet Manager.</p>
+<p>Custom QuerySet Manager functions can extend this class and users can
+add extra queryset functionality.  Any custom manager methods must accept a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> class as its first argument, and a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code> as its second argument.</p>
+<p>The method function should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">QuerySet</span></code>
+, probably the same one that was passed in, but modified in some way.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.password">
+<code class="sig-name descname"><span class="pre">password</span></code><a class="headerlink" href="#pyarcade.models.User.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pyarcade.models.User.username">
+<code class="sig-name descname"><span class="pre">username</span></code><a class="headerlink" href="#pyarcade.models.User.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode string field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.models.get_user_scores_and_rank">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">get_user_scores_and_rank</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.models.get_user_scores_and_rank" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all user’s score and rank for each game
+:return: Dictionary consists of all user’s score and rank for each game, the key-value pair in the dictionary</p>
+<blockquote>
+<div><p>is in the form {username: (score, rank)}</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.models.is_session_owner">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">is_session_owner</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.models.is_session_owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checking if current game has session.
+:param game_name: current game name
+:param session: current session id
+:return: Boolean true or false</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.models.load_user">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">load_user</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">object</span><a class="headerlink" href="#pyarcade.models.load_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Querying the user information based on the user id.
+:param user_id: current user id
+:return: Returns the first object matched by the queryset</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.models.sort_games">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">sort_games</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#pyarcade.models.sort_games" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets in progress games and completed games.
+:param username: current user’s username
+:return: in_progress dict and completed dict containing game objects (sessions)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.models.sort_user_scores">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">sort_user_scores</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.models.sort_user_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets and sort all users’ scores for each game in descending order
+:return: Tuple consists of reverse-sorted scores dict that is in form of {username: score} based on score</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.models.test_account_clean">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.models.</span></code><code class="sig-name descname"><span class="pre">test_account_clean</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.models.test_account_clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleaning the test account.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="minesweeper.html" class="btn btn-neutral float-left" title="Minesweeper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

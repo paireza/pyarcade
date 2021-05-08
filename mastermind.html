@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Mastermind &mdash; pyarcade  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Minesweeper" href="minesweeper.html" />
+    <link rel="prev" title="Connect 4" href="connect4.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyarcade
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect4.html">Connect 4</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mastermind</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.mastermind_">Mastermind Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.mastermind_proxy">Mastermind Proxy Class</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="minesweeper.html">Minesweeper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">Flask</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyarcade</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Mastermind</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/mastermind.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="mastermind">
+<h1>Mastermind<a class="headerlink" href="#mastermind" title="Permalink to this headline">¶</a></h1>
+<section id="module-pyarcade.mastermind_">
+<span id="mastermind-class"></span><h2>Mastermind Class<a class="headerlink" href="#module-pyarcade.mastermind_" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.mastermind_.MastermindGame">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.mastermind_.</span></code><code class="sig-name descname"><span class="pre">MastermindGame</span></code><a class="headerlink" href="#pyarcade.mastermind_.MastermindGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyarcade.game_interface.GameInterface</span></code></p>
+<p>A class representing a Mastermind game session.</p>
+<dl class="simple">
+<dt>Note:</dt><dd><p>For now, Mastermind must have a hidden sequence of length 4 in which all 4 integers may take on values
+between 0 and 9.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pyarcade.mastermind_.MastermindGame.create_game">
+<code class="sig-name descname"><span class="pre">create_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.mastermind_.MastermindGame.create_game" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upon calling create_game, the Mastermind game should initialize its hidden sequence</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “game_id”.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing the session_id in the request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.mastermind_.MastermindGame.read_game">
+<code class="sig-name descname"><span class="pre">read_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.mastermind_.MastermindGame.read_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>reply: dictionary containing three keys.</dt><dd><p>“guesses”: all previous guesses and their respective numbers of cows and bulls
+for this game_session. All guesses should be kept as a list of tuples under the key “guesses.”
+A guess of (0, 1, 2, 3) that has one cow and two bulls should be APPENDED to the list as
+((0, 1, 2, 3), (1, 2)).
+“session_id”: session_id provided with the original request.
+“done”: True or False depending on whether the game is over.</p>
+</dd>
+</dl>
+<p>So the overall reply could look like:
+{“guesses”: [((0, 1, 2, 3), (1, 2), ((3, 2, 1, 0), (2, 1))], “session_id”: 1, “done”: False}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.mastermind_.MastermindGame.set_hidden_sequence">
+<code class="sig-name descname"><span class="pre">set_hidden_sequence</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_sequence</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">tuple</span><a class="headerlink" href="#pyarcade.mastermind_.MastermindGame.set_hidden_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>For testing purposes
+Updates the current hidden_sequence associated with the session_id</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session_id: current session id
+hidden_sequence: sequence used to find bulls and cows</p>
+</dd>
+<dt>Returns:</dt><dd><p>hidden_sequence from parameter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.mastermind_.MastermindGame.update_game">
+<code class="sig-name descname"><span class="pre">update_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.mastermind_.MastermindGame.update_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>Args:</dt><dd><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+integer unique to all ongoing game sessions. The second key is “guess.” The value should be a tuple
+of four integers.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>reply: dictionary containing three keys.</dt><dd><p>“guesses”: all previous guesses and their respective numbers of cows and bulls
+for this game_session. All guesses should be kept as a list of tuples under the key “guesses.”
+A guess of (0, 1, 2, 3) that has one cow and two bulls should be APPENDED to the list as
+((0, 1, 2, 3), (1, 2)).
+“session_id”: session_id provided with the original request.
+“done”: True or False depending on whether the game is over.</p>
+</dd>
+</dl>
+<p>So the overall reply could look like:
+{“guesses”: [((0, 1, 2, 3), (1, 2), ((3, 2, 1, 0), (2, 1))], “session_id”: 1, “done”: False}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyarcade.mastermind_proxy">
+<span id="mastermind-proxy-class"></span><h2>Mastermind Proxy Class<a class="headerlink" href="#module-pyarcade.mastermind_proxy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="pyarcade.mastermind_proxy.MastermindGameProxy">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyarcade.mastermind_proxy.</span></code><code class="sig-name descname"><span class="pre">MastermindGameProxy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_instance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyarcade.mastermind_.MastermindGame" title="pyarcade.mastermind_.MastermindGame"><span class="pre">pyarcade.mastermind_.MastermindGame</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.mastermind_proxy.MastermindGameProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyarcade.game_interface.GameInterface</span></code></p>
+<p>MastermindGameProxy is meant to be a mediator between client code attempting to play the game
+Mastermind and the Mastermind implementation. More specifically, this class’s responsibility
+is to validate requests before passing them on to a Mastermind instance. Separating the responsibility of
+validating inputs to a game and actually running a game helps us follow the single-responsibility principle</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>game_instance: A reference to the game being played.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pyarcade.mastermind_proxy.MastermindGameProxy.create_game">
+<code class="sig-name descname"><span class="pre">create_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.mastermind_proxy.MastermindGameProxy.create_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “game_id”. The value
+should be zero.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions. If the request is invalid, a session_id of
+zero should be returned. Otherwise, pass the request onto the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.mastermind_proxy.MastermindGameProxy.read_game">
+<code class="sig-name descname"><span class="pre">read_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.mastermind_proxy.MastermindGameProxy.read_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions. If the request is invalid, a session_id of
+zero should be returned. Otherwise, pass the request onto the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.mastermind_proxy.MastermindGameProxy.request_session_valid">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">request_session_valid</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_len</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.mastermind_proxy.MastermindGameProxy.request_session_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>request_len: size of request dictionary
+request: dictionary containing single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: True if request is a dictionary of length 1, has key of “session_id”,
+and has unique integer value that is unique to all ongoing game sessions.
+False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.mastermind_proxy.MastermindGameProxy.update_game">
+<code class="sig-name descname"><span class="pre">update_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.mastermind_proxy.MastermindGameProxy.update_game" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+integer unique to all ongoing game sessions. The second key is “guess.” The value should be a tuple
+of four integers.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: dictionary containing a single key-value pair. The key is “session_id”. The value is a
+integer unique to all ongoing game sessions. If the request is invalid, a session_id of
+zero should be returned. Otherwise, pass the request onto the game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyarcade.mastermind_proxy.contain_only_integers">
+<code class="sig-prename descclassname"><span class="pre">pyarcade.mastermind_proxy.</span></code><code class="sig-name descname"><span class="pre">contain_only_integers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">guess</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#pyarcade.mastermind_proxy.contain_only_integers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Args:</dt><dd><p>guess: tuple containing 4 integers</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: True if tuple contains only integers, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="minesweeper.html" class="btn btn-neutral float-right" title="Minesweeper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="connect4.html" class="btn btn-neutral float-left" title="Connect 4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
