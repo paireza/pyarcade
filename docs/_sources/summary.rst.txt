@@ -3,9 +3,42 @@ Summmary
 
 Welcome to pyarcade!
 
-Section 1
+Description
 ------------
-testing2
+PyArcade is a flask app made in python. When starting the project, the user is
+directed to a menu that will allow you to access the ```Mastermind```,
+```Connect 4```, ```Blackjack```, and ```Minesweeper``` games.
+
+To run the sphinx-created developer documentation, navigate to
+[sphinx->_build](https://cmsc435.garrettvanhoy.com/mchen132/cmsc435_course_project_pyarcade/-/tree/master/sphinx/_build/html)
+and open the ```index.html``` file in a browser of your choice
+
+1. Mastermind
+  - The first section contains a button labeled, ```How to Play``` that displays the
+game rules in a popup window.
+  - The second section allows the user to input 4 guesses into their respective boxes
+before pressing the ```submit button```
+  - The third section displays the state of the game with the ```section id```,
+the previous guesses, and the state of the game.
+
+2. Connect 4
+  - The first section contains a button labeled, ```How to Play``` that displays the
+game rules in a popup window.
+  - the second section displays the board and the state of the game.
+  ` the third section allows the user to perform their action by entering the column number.
+
+3. Blackjack
+  - The first section contains a button labeled, ```How to Play``` that displays the
+game rules in a popup window.
+  - The second secion contains the session id and the game status ()
+  - The third section displays the dealer and the player's hands as well as buttons for the
+  commands: ```Hit```, ```Stand```, and ```New Game```
+
+4. Minesweeper
+  - The first section contains a button labeled, ```How to Play``` that displays the
+game rules in a popup window.
+  - The second section displays the session id
+  - The third section displays the board and the game state.
 
 Section 2
 ~~~~~~~~~~~~

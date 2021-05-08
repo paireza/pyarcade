@@ -6,14 +6,13 @@
 Welcome to pyarcade's documentation!
 ====================================
 
-To view a summary of the project, click on the summary tab.
-To view the specific classes, click on their respective tabs.
+To view each specific game's documentation,
+click on their respective tabs.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   summary
    blackjack
    connect4
    mastermind
