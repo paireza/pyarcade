@@ -82,7 +82,7 @@
               
             
             
-              <p><span class="caption-text">Contents:</span></p>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connect4.html">Connect 4</a></li>
@@ -333,10 +333,10 @@
 </li>
       <li><a href="blackjack.html#pyarcade.deck.Deck.get_deck">get_deck() (pyarcade.deck.Deck method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="blackjack.html#pyarcade.blackjack_.BlackjackGame.get_decks_and_hands">get_decks_and_hands() (pyarcade.blackjack_.BlackjackGame method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="flask.html#pyarcade.models.User.get_id">get_id() (pyarcade.models.User method)</a>
 </li>
       <li><a href="flask.html#pyarcade.models.User.get_mastermind_score">get_mastermind_score() (pyarcade.models.User method)</a>
@@ -348,6 +348,10 @@
       <li><a href="flask.html#pyarcade.models.get_user_scores_and_rank">get_user_scores_and_rank() (in module pyarcade.models)</a>
 </li>
       <li><a href="blackjack.html#pyarcade.card.Card.get_value">get_value() (pyarcade.card.Card method)</a>
+</li>
+      <li><a href="connect4.html#pyarcade.connect_4.Connect4Game.getComputerMove">getComputerMove() (pyarcade.connect_4.Connect4Game method)</a>
+</li>
+      <li><a href="connect4.html#pyarcade.connect_4.Connect4Game.getPotentialMoves">getPotentialMoves() (pyarcade.connect_4.Connect4Game method)</a>
 </li>
       <li><a href="flask.html#pyarcade.models.Mastermind.guesses">guesses (pyarcade.models.Mastermind attribute)</a>
 </li>
@@ -397,6 +401,8 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="connect4.html#pyarcade.connect_4.Connect4Game.makeMove">makeMove() (pyarcade.connect_4.Connect4Game method)</a>
+</li>
       <li><a href="flask.html#pyarcade.models.Mastermind">Mastermind (class in pyarcade.models)</a>
 </li>
       <li><a href="flask.html#pyarcade.models.Mastermind.DoesNotExist">Mastermind.DoesNotExist</a>
@@ -731,8 +737,6 @@
 </li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_create_blackjack_game">test_create_blackjack_game() (tests.test_blackjack.ApplicationTestCase static method)</a>
 </li>
-      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_create_connect4_game">test_create_connect4_game() (tests.test_connect4.ApplicationTestCase static method)</a>
-</li>
       <li><a href="tests.html#tests.test_connect4_proxy.ProxyTestCase.test_create_game_game_id_missing">test_create_game_game_id_missing() (tests.test_connect4_proxy.ProxyTestCase method)</a>
 </li>
       <li><a href="tests.html#tests.test_blackjack_proxy.BlackjackProxyTestCase.test_create_game_game_id_wrong_type">test_create_game_game_id_wrong_type() (tests.test_blackjack_proxy.BlackjackProxyTestCase method)</a>
@@ -740,8 +744,6 @@
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_create_game_gives_unique_sequence">test_create_game_gives_unique_sequence() (tests.test_blackjack.ApplicationTestCase static method)</a>
 
       <ul>
-        <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_create_game_gives_unique_sequence">(tests.test_connect4.ApplicationTestCase static method)</a>
-</li>
         <li><a href="tests.html#tests.test_mastermind.ApplicationTestCase.test_create_game_gives_unique_sequence">(tests.test_mastermind.ApplicationTestCase static method)</a>
 </li>
         <li><a href="tests.html#tests.test_minesweeper.ApplicationTestCase.test_create_game_gives_unique_sequence">(tests.test_minesweeper.ApplicationTestCase static method)</a>
@@ -771,11 +773,19 @@
 </li>
       <li><a href="tests.html#tests.test_deck.BlackjackDeckTestCase.test_deck_shuffle_twice">test_deck_shuffle_twice() (tests.test_deck.BlackjackDeckTestCase method)</a>
 </li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_easy_create_connect4_game">test_easy_create_connect4_game() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_easy_create_game_gives_unique_sequence">test_easy_create_game_gives_unique_sequence() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_easy_four_moves_game_win">test_easy_four_moves_game_win() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_easy_update_connect4_game">test_easy_update_connect4_game() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_easy_update_game_done_boolean">test_easy_update_game_done_boolean() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
       <li><a href="tests.html#tests.test_card.BlackjackCardTestCase.test_equals_method">test_equals_method() (tests.test_card.BlackjackCardTestCase method)</a>
 </li>
       <li><a href="tests.html#tests.test_minesweeper.ApplicationTestCase.test_finish_game_minesweeper_game">test_finish_game_minesweeper_game() (tests.test_minesweeper.ApplicationTestCase static method)</a>
-</li>
-      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_four_moves_game_win">test_four_moves_game_win() (tests.test_connect4.ApplicationTestCase static method)</a>
 </li>
       <li><a href="tests.html#tests.test_app.ApplicationTestCase.test_get_account_page_authenticated">test_get_account_page_authenticated() (tests.test_app.ApplicationTestCase method)</a>
 </li>
@@ -797,7 +807,7 @@
 </li>
       <li><a href="tests.html#tests.test_card.BlackjackCardTestCase.test_getter">test_getter() (tests.test_card.BlackjackCardTestCase method)</a>
 </li>
-      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_handle_column_filled">test_handle_column_filled() (tests.test_connect4.ApplicationTestCase static method)</a>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_hard_update_and_read">test_hard_update_and_read() (tests.test_connect4.ApplicationTestCase static method)</a>
 </li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_hit_blackjack_game">test_hit_blackjack_game() (tests.test_blackjack.ApplicationTestCase static method)</a>
 </li>
@@ -806,6 +816,12 @@
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_hit_stand_blackjack_game">test_hit_stand_blackjack_game() (tests.test_blackjack.ApplicationTestCase static method)</a>
 </li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_lose_blackjack_game">test_lose_blackjack_game() (tests.test_blackjack.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_med_handle_column_filled">test_med_handle_column_filled() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_med_read_connect4_game">test_med_read_connect4_game() (tests.test_connect4.ApplicationTestCase static method)</a>
+</li>
+      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_med_update_game_return_same_session_id">test_med_update_game_return_same_session_id() (tests.test_connect4.ApplicationTestCase static method)</a>
 </li>
       <li><a href="tests.html#tests.test_minesweeper.ApplicationTestCase.test_minesweeper_read_game_done_boolean">test_minesweeper_read_game_done_boolean() (tests.test_minesweeper.ApplicationTestCase static method)</a>
 </li>
@@ -831,11 +847,11 @@
 </li>
       <li><a href="tests.html#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_multiple_request_len">test_proxy_create_game_multiple_request_len() (tests.test_mastermind_proxy.MastermindTestCase method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="tests.html#tests.test_mastermind_proxy.MastermindTestCase.test_proxy_create_game_no_game_id">test_proxy_create_game_no_game_id() (tests.test_mastermind_proxy.MastermindTestCase method)</a>
 </li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_read_blackjack_game">test_read_blackjack_game() (tests.test_blackjack.ApplicationTestCase static method)</a>
-</li>
-      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_read_connect4_game">test_read_connect4_game() (tests.test_connect4.ApplicationTestCase static method)</a>
 </li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_read_game_done_boolean">test_read_game_done_boolean() (tests.test_blackjack.ApplicationTestCase static method)</a>
 
@@ -843,8 +859,6 @@
         <li><a href="tests.html#tests.test_mastermind.ApplicationTestCase.test_read_game_done_boolean">(tests.test_mastermind.ApplicationTestCase static method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="tests.html#tests.test_connect4_proxy.ProxyTestCase.test_read_game_no_key_value_pair">test_read_game_no_key_value_pair() (tests.test_connect4_proxy.ProxyTestCase method)</a>
 </li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_read_game_return_correct_keys">test_read_game_return_correct_keys() (tests.test_blackjack.ApplicationTestCase static method)</a>
@@ -879,10 +893,6 @@
 </li>
       <li><a href="tests.html#tests.test_app.ApplicationTestCase.test_register_taken_username">test_register_taken_username() (tests.test_app.ApplicationTestCase method)</a>
 </li>
-      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_update_and_read">test_update_and_read() (tests.test_connect4.ApplicationTestCase static method)</a>
-</li>
-      <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_update_connect4_game">test_update_connect4_game() (tests.test_connect4.ApplicationTestCase static method)</a>
-</li>
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_update_game_display_correct_keys">test_update_game_display_correct_keys() (tests.test_blackjack.ApplicationTestCase static method)</a>
 </li>
       <li><a href="tests.html#tests.test_minesweeper.ApplicationTestCase.test_update_game_display_status">test_update_game_display_status() (tests.test_minesweeper.ApplicationTestCase static method)</a>
@@ -890,8 +900,6 @@
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_update_game_done_boolean">test_update_game_done_boolean() (tests.test_blackjack.ApplicationTestCase static method)</a>
 
       <ul>
-        <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_update_game_done_boolean">(tests.test_connect4.ApplicationTestCase static method)</a>
-</li>
         <li><a href="tests.html#tests.test_mastermind.ApplicationTestCase.test_update_game_done_boolean">(tests.test_mastermind.ApplicationTestCase static method)</a>
 </li>
       </ul></li>
@@ -908,8 +916,6 @@
       <li><a href="tests.html#tests.test_blackjack.ApplicationTestCase.test_update_game_return_same_session_id">test_update_game_return_same_session_id() (tests.test_blackjack.ApplicationTestCase static method)</a>
 
       <ul>
-        <li><a href="tests.html#tests.test_connect4.ApplicationTestCase.test_update_game_return_same_session_id">(tests.test_connect4.ApplicationTestCase static method)</a>
-</li>
         <li><a href="tests.html#tests.test_mastermind.ApplicationTestCase.test_update_game_return_same_session_id">(tests.test_mastermind.ApplicationTestCase static method)</a>
 </li>
         <li><a href="tests.html#tests.test_minesweeper.ApplicationTestCase.test_update_game_return_same_session_id">(tests.test_minesweeper.ApplicationTestCase static method)</a>

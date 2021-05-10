@@ -4,8 +4,7 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Connect 4 &mdash; pyarcade  documentation</title>
@@ -85,9 +84,8 @@
               
             
             
-              <p><span class="caption-text">Contents:</span></p>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="summary.html">Summmary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="blackjack.html">BlackJack</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Connect 4</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-pyarcade.connect_4">Connect 4 Class</a></li>
@@ -164,9 +162,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="connect-4">
+  <div class="section" id="connect-4">
 <h1>Connect 4<a class="headerlink" href="#connect-4" title="Permalink to this headline">¶</a></h1>
-<section id="module-pyarcade.connect_4">
+<div class="section" id="module-pyarcade.connect_4">
 <span id="connect-4-class"></span><h2>Connect 4 Class<a class="headerlink" href="#module-pyarcade.connect_4" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pyarcade.connect_4.Connect4Game">
@@ -180,17 +178,18 @@ connect 4 game session.</p>
 </dl>
 <dl class="py method">
 <dt id="pyarcade.connect_4.Connect4Game.AI_turn">
-<code class="sig-name descname"><span class="pre">AI_turn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.AI_turn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">AI_turn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.AI_turn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Similar to update_game function except this one is played by the AI. The column is randomly generated
 Args:</p>
 <blockquote>
 <div><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
 integer unique to all ongoing game sessions. The second key is “col”. The value should be a integer denoting
-which column the player wishes to place their marker in.</p>
+which column the player wishes to place their marker in.
+diff: an integer containing the level of difficulty of AI</p>
 </div></blockquote>
 <dl class="simple">
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-“. “x”
 markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
 “session_id”: session_id provided with the original request.
 “turn”: Always 1 since AI is 2.
@@ -261,7 +260,7 @@ integer unique to all ongoing game sessions. The second key is “col”. The va
 which column the player wishes to place their marker in.
 player: the current player</p>
 </dd>
-<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-“. “x”
 markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
 “session_id”: session_id provided with the original request.
 “turn”: whose turn is next. Either 1 or 2.
@@ -278,6 +277,33 @@ markers are for player 1. “o” markers are for player 2, and “-” markers 
 <dt>Args:</dt><dd><p>request: dictionary containing single key-value pair. The key is “game_id”.</p>
 </dd>
 <dt>Returns:</dt><dd><p>reply: dictionary containing the session_id in the request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.getComputerMove">
+<code class="sig-name descname"><span class="pre">getComputerMove</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">difficulty</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.getComputerMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that gets all potenial moves.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>session: a dictionary containing the board and turn
+difficulty: an integer representing difficultly of AI</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: a int representing a move for the AI to make</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.getPotentialMoves">
+<code class="sig-name descname"><span class="pre">getPotentialMoves</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">difficulty</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.getPotentialMoves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that gets all potenial moves.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>board: a 2d list representing the game
+turn: integer representing either player 1 or 2’s turn
+difficulty: an integer representing difficultly of AI</p>
+</dd>
+<dt>Returns:</dt><dd><p>reply: list containing potential moves</p>
 </dd>
 </dl>
 </dd></dl>
@@ -308,6 +334,18 @@ col: an integer representing the target row</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pyarcade.connect_4.Connect4Game.makeMove">
+<code class="sig-name descname"><span class="pre">makeMove</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.makeMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method that updates the target row for potenial move.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>board: a 2d list representing the game
+player: integer representing either player 1 or 2
+col: an integer representing the target row</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pyarcade.connect_4.Connect4Game.matrix_to_list_of_all_diagonals">
 <em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">matrix_to_list_of_all_diagonals</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.matrix_to_list_of_all_diagonals" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -320,7 +358,7 @@ col: an integer representing the target row</p>
 integer unique to all ongoing game sessions.</p>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-“. “x”
 markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
 “session_id”: session_id provided with the original request.
 “turn”: whose turn is next. Either 1 or 2.
@@ -335,12 +373,13 @@ markers are for player 1. “o” markers are for player 2, and “-” markers 
 <dt id="pyarcade.connect_4.Connect4Game.update_game">
 <code class="sig-name descname"><span class="pre">update_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#pyarcade.connect_4.Connect4Game.update_game" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
-<dt>Args:</dt><dd><p>request: dictionary containing two key-value pairs. One key is “session_id”. The value is a
+<dt>Args:</dt><dd><p>request: dictionary containing three key-value pairs. One key is “session_id”. The value is a
 integer unique to all ongoing game sessions. The second key is “col”. The value should be a integer denoting
-which column the player wishes to place their marker in.</p>
+which column the player wishes to place their marker in. The third key is “difficulty”, which represents
+difficulty of AI. This value ranges from 0 to 2 inclusive.</p>
 </dd>
 <dt>Returns:</dt><dd><dl class="simple">
-<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-”. “x”
+<dt>reply: dictionary containing four keys.</dt><dd><p>“board”: current board state of the connect4 game, which is a 6x7 list of either “x”, “o”, or “-“. “x”
 markers are for player 1. “o” markers are for player 2, and “-” markers are empty spaces.
 “session_id”: session_id provided with the original request.
 “turn”: Always 1 since AI is 2.
@@ -364,8 +403,8 @@ col: an integer representing the target row</p>
 
 </dd></dl>
 
-</section>
-<section id="module-pyarcade.connect_4_proxy">
+</div>
+<div class="section" id="module-pyarcade.connect_4_proxy">
 <span id="connect-4-proxy-class"></span><h2>Connect 4 Proxy Class<a class="headerlink" href="#module-pyarcade.connect_4_proxy" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="pyarcade.connect_4_proxy.Connect4GameProxy">
@@ -424,8 +463,8 @@ zero should be returned. Otherwise, pass the request onto the game.</p>
 
 </dd></dl>
 
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
